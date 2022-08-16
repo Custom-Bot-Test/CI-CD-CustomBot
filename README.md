@@ -1,4 +1,4 @@
-CI/CD - CUSTOM BOT
+# CI/CD - CUSTOM BOT
 
 ## Features Planned - 
 #### Displaying Logs from the CI/CD pipeline as a whole
