@@ -1,10 +1,7 @@
 import typer
 import subprocess
 
-
-
 bot = typer.Typer()
-
 
 @bot.command("commit-sub")
 def commit_subdomain(subdomain: str = 'cloud', message: str = 'ran commit-sub', branch: str = 'main'):
@@ -22,9 +19,8 @@ resource "cloudflare_record" "%s" {
     with open("test.tf", 'a') as cloudflare_tf:
         cloudflare_tf.write(template % (subdomain, subdomain))
     
-    subprocess.call(["git", "add", "."])
-    subprocess.call(["git", "commit", "-am", message])
-    subprocess.call(["git", "push", "origin", branch])
+    exec(open("push_to_git.py").read())
+
 
 
 @bot.command("commit")
