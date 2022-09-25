@@ -5,7 +5,7 @@ bot = typer.Typer()
 
 # NOTE : Code injection based security flaws are ignored for the POC
 
-#command: py bot.py commit-sub | <subdomain_name> | message | branch  
+#command: py bot.py commit-sub | <subdomain_name> | message | branch |
 @bot.command("commit-sub")
 def commit_subdomain(subdomain: str = 'cloud', message: str = 'ran commit-sub', branch: str = 'main'):
 
